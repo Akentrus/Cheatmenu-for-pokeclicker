@@ -48,18 +48,16 @@
 
     menuButton.addEventListener('click', () => {
         if (secondaryMenu && secondaryMenu.parentElement) {
-            // Close the secondary menu
             document.body.removeChild(secondaryMenu);
             secondaryMenu = null;
         } else {
-            // Open the secondary menu
             createSecondaryMenu();
         }
     });
 
     function createSecondaryMenu() {
         const buttonRect = menuButton.getBoundingClientRect();
-        const secondaryMenuHeight = 200; // Adjust this value as needed
+        const secondaryMenuHeight = 200;
 
         secondaryMenu = document.createElement('div');
         secondaryMenu.style.position = 'fixed';
@@ -103,7 +101,6 @@
         `;
         document.body.appendChild(secondaryMenu);
 
-        // Make the secondary menu draggable
         let isSecondaryDragging = false;
         let secondaryOffsetX, secondaryOffsetY;
 
