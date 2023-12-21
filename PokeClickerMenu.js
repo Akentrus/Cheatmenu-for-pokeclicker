@@ -126,6 +126,12 @@
                 <input type="text" id="pokemonID" placeholder="Enter Pokedex Number">
            </div>
        -->
+           <div>
+                <button onclick="applyCommand('App.game.party.gainExp', 'partyExperienceAmount')">All Pokemon Max Level(Need Batches for higher Level)</button>
+           </div>
+           <div style="display: none;">
+                <input type="text" id="partyExperienceAmount" value="1000000000">
+           </div>
         `;
         document.body.appendChild(secondaryMenu);
 
