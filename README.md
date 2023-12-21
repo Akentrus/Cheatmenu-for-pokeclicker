@@ -10,3 +10,13 @@ Click on "Create new userscript" drag the .js file into the textbox click File -
 
 
 This is not made to look perfect in any way and is entirely for learning purposes.
+
+
+
+
+.
+
+
+
+I comment out any unsave features that could harm your savefile if you wish to use them take a look at the script and uncomment them.
+I'll include a description of why they're unsave so use at your own risk.
