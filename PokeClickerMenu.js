@@ -98,6 +98,12 @@
                 <input type="text" id="farmPointsAmount" placeholder="Enter amount">
                 <button onclick="applyCommand('App.game.wallet.gainFarmPoints', 'farmPointsAmount')">Apply</button>
             </div>
+            <div>
+                <button onclick="applyCommand('App.game.farming.gainRandomBerry', 'berryAmount');">Get random Berry</button>
+            </div>
+            <div style="display: none;">
+                <input type="text" id="berryAmount" value="1">
+            </div>
         `;
         document.body.appendChild(secondaryMenu);
 
@@ -127,11 +133,11 @@
     window.applyCommand = function (commandFunction, amountInputId) {
         const amountInput = document.getElementById(amountInputId);
         const amount = parseFloat(amountInput.value);
-        if (!isNaN(amount)) {
-            eval(`${commandFunction}(${amount})`);
-            amountInput.value = '';
+         if (!isNaN(amount)) {
+        eval(`${commandFunction}(${amount})`);
+        // Do not clear the value of the input field
         } else {
-            alert('Please enter a valid numeric amount.');
-        }
-    };
+        alert('Please enter a valid numeric amount.');
+    }
+};
 })();
