@@ -101,6 +101,13 @@
                 <button onclick="applyCommand('App.game.wallet.gainFarmPoints', 'farmPointsAmount')">Apply</button>
             </div>
             <div>
+                <button onclick="applyCommand('App.game.pokeballs.gainPokeballs', 'masterballType', 'masterBallAmount')">Add Masterballs</button>
+                <input type="text" id="masterBallAmount" placeholder="Enter amount">
+            </div>
+                <div style="display: none;">
+                <input type="text" id="masterballType" value="3">
+            </div>
+            <div>
                 <button onclick="applyCommand('App.game.farming.gainRandomBerry', 'berryAmount');">Get random Berry</button>
             </div>
             <div style="display: none;">
@@ -158,14 +165,31 @@
         });
     }
 
-    window.applyCommand = function (commandFunction, amountInputId) {
-        const amountInput = document.getElementById(amountInputId);
-        const amount = parseFloat(amountInput.value);
-        if (!isNaN(amount)) {
-            eval(`${commandFunction}(${amount})`);
-        // Do not clear the value of the input field duh
-        } else {
-            alert('Please enter a valid numeric amount.');
-        }
-    };
+        window.applyCommand = function (commandFunction, amountInputId, secondValueInputId) {
+            const amountInput = document.getElementById(amountInputId);
+            const amount = parseFloat(amountInput.value);
+
+            let command;
+
+            if (!isNaN(amount)) {
+                if (secondValueInputId) {
+                    const secondValueInput = document.getElementById(secondValueInputId);
+                    const secondValue = parseFloat(secondValueInput.value);
+
+                if (!isNaN(secondValue)) {
+                command = `${commandFunction}(${amount}, ${secondValue})`;
+                    } else {
+                        alert('Please enter a valid numeric second amount.');
+                        return;
+                    }
+                } else {
+                       command = `${commandFunction}(${amount})`;
+                }
+
+                       eval(command);
+                // Do not clear the value of the input field
+            } else {
+                alert('Please enter a valid numeric amount.');
+            }
+     };
 })();
