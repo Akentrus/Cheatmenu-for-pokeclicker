@@ -104,6 +104,12 @@
             <div style="display: none;">
                 <input type="text" id="berryAmount" value="1">
             </div>
+            <div>
+                <button onclick="applyCommand('App.game.underground.gainEnergy', 'energyAmount', 3)">Refill underground Energy (3 per click)</button>
+            </div>
+            <div style="display: none;">
+                <input type="text" id="energyAmount" value="3">
+            </div>
         `;
         document.body.appendChild(secondaryMenu);
 
