@@ -112,6 +112,20 @@
             <div style="display: none;">
                 <input type="text" id="energyAmount" value="3">
             </div>
+       <!--
+             Add Pokemon to Party
+             DANGEROUS: CAN BREAK YOUR SAVEFILE
+             Only add Pokemon to your party that are available in your region; otherwise, the game breaks!!!
+             For example, in the first region 1-151, second region 151 till whatever the max is.
+             If you get just 1 Pokemon from another region that you have not unlocked, your savegame breaks, and you are softlocked.
+             You have been warned. Remove the comment tags below to activate the button.
+       -->
+       <!--
+           <div>
+        <button onclick="applyCommand('App.game.party.gainPokemonById', 'pokemonID')">Add Pokemon to Party</button>
+        <input type="text" id="pokemonID" placeholder="Enter Pokedex Number">
+           </div>
+       -->
         `;
         document.body.appendChild(secondaryMenu);
 
