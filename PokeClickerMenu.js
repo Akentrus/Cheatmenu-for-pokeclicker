@@ -122,8 +122,8 @@
        -->
        <!--
            <div>
-        <button onclick="applyCommand('App.game.party.gainPokemonById', 'pokemonID')">Add Pokemon to Party</button>
-        <input type="text" id="pokemonID" placeholder="Enter Pokedex Number">
+                <button onclick="applyCommand('App.game.party.gainPokemonById', 'pokemonID')">Add Pokemon to Party</button>
+                <input type="text" id="pokemonID" placeholder="Enter Pokedex Number">
            </div>
        -->
         `;
