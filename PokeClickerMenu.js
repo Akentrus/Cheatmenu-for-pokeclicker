@@ -139,6 +139,12 @@
            <div style="display: none;">
                 <input type="text" id="partyExperienceAmount" value="1000000000">
            </div>
+           <div>
+                <button onclick="applyCommand('App.game.breeding.gainRandomEgg', 'eggAmount')">Add random Egg to Slot</button>
+           </div>
+           <div style="display: none;">
+                <input type="text" id="eggAmount" value="1">
+           </div>
         `;
         document.body.appendChild(secondaryMenu);
 
