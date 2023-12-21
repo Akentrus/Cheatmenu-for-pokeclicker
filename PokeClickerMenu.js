@@ -133,11 +133,11 @@
     window.applyCommand = function (commandFunction, amountInputId) {
         const amountInput = document.getElementById(amountInputId);
         const amount = parseFloat(amountInput.value);
-         if (!isNaN(amount)) {
-        eval(`${commandFunction}(${amount})`);
-        // Do not clear the value of the input field
+        if (!isNaN(amount)) {
+            eval(`${commandFunction}(${amount})`);
+        // Do not clear the value of the input field duh
         } else {
-        alert('Please enter a valid numeric amount.');
-    }
-};
+            alert('Please enter a valid numeric amount.');
+        }
+    };
 })();
