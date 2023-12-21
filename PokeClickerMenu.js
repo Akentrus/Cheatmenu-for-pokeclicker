@@ -108,10 +108,10 @@
                 <input type="text" id="masterballType" value="3">
             </div>
             <div>
-                <button onclick="applyCommand('App.game.farming.gainRandomBerry', 'berryAmount');">Get random Berry</button>
+                <button onclick="applyCommand('App.game.farming.gainRandomBerry', 'berryAmount');">Get 100 random Berrys</button>
             </div>
             <div style="display: none;">
-                <input type="text" id="berryAmount" value="1">
+                <input type="text" id="berryAmount" value="100">
             </div>
             <div>
                 <button onclick="applyCommand('App.game.underground.gainEnergy', 'energyAmount')">Refill underground Energy (3 per click)</button>
