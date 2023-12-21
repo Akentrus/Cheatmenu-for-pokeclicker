@@ -19,6 +19,7 @@
     menuButton.style.padding = '10px';
     menuButton.style.color = '#fff';
     menuButton.style.cursor = 'move';
+    menuButton.style.zIndex = '9999';
     menuButton.innerHTML = 'Menu by Akentrus';
     document.body.appendChild(menuButton);
 
@@ -66,7 +67,8 @@
         secondaryMenu.style.background = '#2ecc71';
         secondaryMenu.style.padding = '10px';
         secondaryMenu.style.color = '#fff';
-        secondaryMenu.style.cursor = 'move'; 
+        secondaryMenu.style.cursor = 'move';
+        secondaryMenu.style.zIndex = '9999';
         secondaryMenu.innerHTML = `
             <div>
                 <label for="diamonds">Diamonds:</label>
