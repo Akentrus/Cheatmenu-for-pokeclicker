@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         Pokeclicker currency cheat
+// @name         Pokeclicker Cheatmenu
 // @namespace    http://tampermonkey.net/
 // @version      0.2
-// @description  Currency cheat for Pokeclicker.com
+// @description  Cheatmenu for Pokeclicker.com
 // @author       Akentrus
 // @match         https://www.pokeclicker.com/
 // @grant        none
