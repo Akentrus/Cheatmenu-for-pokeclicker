@@ -134,7 +134,7 @@
            </div>
        -->
            <div>
-                <button onclick="applyCommand('App.game.party.gainExp', 'partyExperienceAmount')">All Pokemon Max Level(Need Batches for higher Level)</button>
+                <button onclick="applyCommand('App.game.party.gainExp', 'partyExperienceAmount')">All Pokemon Max Level(Need Badges for higher Level)</button>
            </div>
            <div style="display: none;">
                 <input type="text" id="partyExperienceAmount" value="1000000000">
